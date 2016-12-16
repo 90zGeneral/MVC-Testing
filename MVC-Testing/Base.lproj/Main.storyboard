@@ -1,26 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-Ct-WSu">
+                                <rect key="frame" x="56" y="60" width="209" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="bVm-Z0-II2"/>
+                                    <constraint firstAttribute="height" constant="28" id="r1L-mx-AQU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haile-selassie" translatesAutoresizingMaskIntoConstraints="NO" id="zha-aS-33W" customClass="RoundedImageView" customModule="MVC_Testing" customModuleProvider="target">
+                                <rect key="frame" x="80" y="180" width="161" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="4b9-1g-Yue"/>
+                                    <constraint firstAttribute="height" constant="128" id="HmZ-4t-mli"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQe-dP-vcF">
+                                <rect key="frame" x="56" y="117" width="209" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="Hkv-Xl-7IA"/>
+                                    <constraint firstAttribute="height" constant="30" id="q7J-K8-C2C"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71n-Bh-DLN">
+                                <rect key="frame" x="130" y="359" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8g7-wx-xSj"/>
+                                    <constraint firstAttribute="width" constant="60" id="yQm-NH-ztA"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="rename:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBP-U3-Wfu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YOd-Ct-WSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7DV-JD-BYZ"/>
+                            <constraint firstItem="71n-Bh-DLN" firstAttribute="top" secondItem="zha-aS-33W" secondAttribute="bottom" constant="51" id="DTZ-7C-0CQ"/>
+                            <constraint firstItem="CQe-dP-vcF" firstAttribute="top" secondItem="YOd-Ct-WSu" secondAttribute="bottom" constant="29" id="MYl-Lp-5N8"/>
+                            <constraint firstItem="zha-aS-33W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aM4-fk-M3P"/>
+                            <constraint firstItem="YOd-Ct-WSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="bqr-wW-vye"/>
+                            <constraint firstItem="zha-aS-33W" firstAttribute="top" secondItem="YOd-Ct-WSu" secondAttribute="bottom" constant="92" id="khy-TB-0du"/>
+                            <constraint firstItem="CQe-dP-vcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ob6-OH-HQC"/>
+                            <constraint firstItem="71n-Bh-DLN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uaS-Sm-av5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="zha-aS-33W" id="j1R-eo-QNc"/>
+                        <outlet property="label" destination="YOd-Ct-WSu" id="EfJ-wq-FTr"/>
+                        <outlet property="textField" destination="CQe-dP-vcF" id="vyd-3I-gJp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="137.32394366197184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="haile-selassie" width="2622" height="3600"/>
+    </resources>
 </document>
